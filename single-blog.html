@@ -34,18 +34,22 @@
     
     <header>
         <div class="container">
-            <button class="hamburger-menu" id="hamburger-btn" aria-label="Toggle menu">
-                &#9776; </button>
+            <!-- Checkbox tersembunyi -->
+            <input type="checkbox" class="hamburger-toggle" id="hamburger-toggle">
             
-            <nav class="navbar" id="navbar-menu">
+            <!-- Navbar (Sidebar) - id "navbar-menu" dihapus karena tidak perlu -->
+            <nav class="navbar">
                 <ul class="menu">
                     <li><a href="index.html">Home</a></li> 
-                    <li><a href="blog.html">Blog</a></li>
-                    
-                    <li class="current-page"><a href="#">Works</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <!-- Saya perbaiki ini, halaman blog seharusnya menyorot 'Blog' -->
+                    <li class="current-page"><a href="blog.html">Blog</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+
+             <!-- Label (Tombol Hamburger) -->
+             <label for="hamburger-toggle" class="hamburger-menu" aria-label="Buka menu">☰</label>
         </div>
     </header>
 
@@ -78,7 +82,7 @@
         </div>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer" id="contact">
         <div class="footer-media">
             <a href="#"><i class="fab fa-facebook-square"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -88,20 +92,7 @@
         <p>Copyright &copy;2025 Muhammad Afin Aditya</p>
     </footer>
 
-
-    <script>
-        // Memilih tombol hamburger dan menu navbar
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const navbarMenu = document.getElementById('navbar-menu');
-
-        // Menambahkan event listener 'click'
-        hamburgerBtn.addEventListener('click', function() {
-            // Toggle kelas 'active' pada tombol
-            this.classList.toggle('active');
-            // Toggle kelas 'active' pada menu
-            navbarMenu.classList.toggle('active');
-        });
-    </script>
+    <!-- Blok <script> sudah dihapus -->
 
 </body>
 </html>

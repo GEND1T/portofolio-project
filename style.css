@@ -59,6 +59,10 @@ header .container {
 }
 .menu a:hover { color: var(--primary-color); }
 
+.hamburger-toggle {
+    display: none; /* Sembunyikan checkbox */
+}
+
 .menu .current-page a {
     color: var(--primary-color);
     font-weight: 700;
@@ -99,6 +103,7 @@ header .container {
     cursor: pointer;
     z-index: 1001; /* Pastikan tombol di atas sidebar */
     position: relative; /* <-- TAMBAHKAN BARIS INI */
+    transition: color 0.3s ease-in-out; /* Transisi warna */
 }
 
 /* === HERO SECTION === */
@@ -208,7 +213,14 @@ footer p {
 /* === RESPONSIVE DESIGN (MOBILE VIEW) === */
 @media (max-width: 768px) {
 
+    /* === DIHAPUS === (Blok ini tidak perlu karena sudah ada di bawah)
     .hamburger-menu.active {
+        color: white;
+    }
+    */
+
+    /* Ini sudah benar */
+    .hamburger-toggle:checked ~ .hamburger-menu {
         color: white;
     }
     
@@ -236,9 +248,11 @@ footer p {
         z-index: 1000; /* Tampil di atas konten lain */
     }
 
-    .navbar.active {
+    /* Ini sudah benar */
+    .hamburger-toggle:checked + .navbar {
         right: 0; /* Pindahkan ke layar (geser masuk) saat aktif */
     }
+
 
     .menu {
         flex-direction: column; /* Susun menu secara vertikal */
@@ -291,5 +305,3 @@ footer p {
         height: auto;
     }
 }
-
-

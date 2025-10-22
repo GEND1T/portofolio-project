@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -16,6 +16,11 @@
     
     <header>
         <div class="container">
+
+            <!-- === INI YANG HILANG === -->
+            <!-- Checkbox tersembunyi HARUS diletakkan di sini, sebelum nav dan label -->
+            <input type="checkbox" class="hamburger-toggle" id="hamburger-toggle">
+
             <!-- Navigasi ini sekarang akan berfungsi sebagai sidebar di mobile -->
             <nav class="navbar" id="mobile-nav">
                 <ul class="menu">
@@ -23,11 +28,13 @@
                     <li><a href="blog.html">Blog</a></li>
                     
                     <li><a href="works.html">Works</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <!-- Tombol Hamburger baru ditambahkan -->
-            <button class="hamburger-menu" id="hamburger-btn" aria-label="Buka menu">☰</button>
+            <!-- Tombol Hamburger (Label) -->
+            <label for="hamburger-toggle" class="hamburger-menu" aria-label="Buka menu">☰</label>
+            
+            <!-- Tombol <button> yang lama sudah Anda komentari, itu bagus -->
         </div>
     </header>
 
@@ -117,7 +124,7 @@
         </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer" id="contact">
         <div class="footer-media">
             <a href="#"><i class="fab fa-facebook-square"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -127,18 +134,7 @@
         <p>Copyright &copy;2025 Muhammad Afin Aditya</p>
     </footer>
 
-    <!-- JavaScript untuk fungsionalitas klik -->
-    <script>
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const mobileNav = document.getElementById('mobile-nav');
-
-        hamburgerBtn.addEventListener('click', () => {
-            // Menambah/menghapus kelas 'active' pada sidebar dan tombol
-            mobileNav.classList.toggle('active');
-            hamburgerBtn.classList.toggle('active');
-        });
-    </script>
+    <!-- Tidak perlu JavaScript untuk menu -->
 
 </body>
 </html>
-

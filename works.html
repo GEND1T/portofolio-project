@@ -15,18 +15,22 @@
 
     <header>
         <div class="container">
-            <button class="hamburger-menu" aria-label="Toggle menu">
-                &#9776; </button>
+            <!-- Checkbox tersembunyi -->
+            <input type="checkbox" class="hamburger-toggle" id="hamburger-toggle">
 
+            <!-- Navbar (Sidebar) -->
             <nav class="navbar">
                 <ul class="menu">
                     <li><a href="index.html">Home</a></li> 
                     <li><a href="blog.html">Blog</a></li>
                     
                     <li class="current-page"><a href="#">Works</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+
+            <!-- Label (Tombol Hamburger) -->
+            <label for="hamburger-toggle" class="hamburger-menu" aria-label="Buka menu">☰</label>
         </div>
     </header>
 
@@ -90,7 +94,7 @@
         </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer" id="contact">
         <div class="footer-media">
             <a href="#"><i class="fab fa-facebook-square"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -100,18 +104,7 @@
         <p>Copyright &copy;Muhammad Afin Aditya</p>
     </footer>
 
-
-    <script>
-        const hamburger = document.querySelector('.hamburger-menu');
-        const navbar = document.querySelector('.navbar');
-
-        hamburger.addEventListener('click', () => {
-            // Toggle kelas 'active' pada tombol hamburger
-            hamburger.classList.toggle('active');
-            // Toggle kelas 'active' pada navbar (sidebar)
-            navbar.classList.toggle('active');
-        });
-    </script>
+    <!-- Blok <script> sudah dihapus -->
 
 </body>
 </html>
