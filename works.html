@@ -18,18 +18,17 @@
             <!-- Checkbox tersembunyi -->
             <input type="checkbox" class="hamburger-toggle" id="hamburger-toggle">
 
-            <!-- Navbar (Sidebar) -->
             <nav class="navbar">
                 <ul class="menu">
                     <li><a href="index.html">Home</a></li> 
                     <li><a href="blog.html">Blog</a></li>
-                    
-                    <li class="current-page"><a href="#">Works</a></li>
+                    <li class="current-page"><a href="works.html">Works</a></li>
+                    <!-- Link "Contact" diubah untuk mengarah ke ID footer -->
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
 
-            <!-- Label (Tombol Hamburger) -->
+            <!-- Tombol Hamburger (Label) -->
             <label for="hamburger-toggle" class="hamburger-menu" aria-label="Buka menu">☰</label>
         </div>
     </header>
@@ -41,7 +40,7 @@
 
                 <div class="works-list">
 
-                    <div class="work-card">
+                    <article class="work-card">
                         <img src="assets/images/2 (4).png" alt="Designing Dashboards">
                         <div class="work-details">
                             <h3>Designing Dashboards</h3>
@@ -51,9 +50,9 @@
                             </div>
                             <p>Proyek perancangan dashboard interaktif dengan fokus pada tampilan bersih dan kemudahan navigasi. Menggunakan kombinasi warna gelap dan elemen minimalis agar data lebih mudah dipahami secara visual.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="work-card">
+                    <article class="work-card">
                         <img src="assets/images/2 (3).png" alt="Creative Portrait Series">
                         <div class="work-details">
                             <h3>Creative Portrait Series</h3>
@@ -63,9 +62,9 @@
                             </div>
                             <p>Kumpulan ilustrasi digital yang menggambarkan karakter dan emosi manusia dalam gaya warna berani. Setiap karya dirancang dengan sentuhan personal untuk menunjukkan ekspresi dan identitas visual yang kuat.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="work-card">
+                    <article class="work-card">
                         <img src="assets/images/2 (2).png" alt="Modern Type Exploration">
                         <div class="work-details">
                             <h3>Modern Type Exploration</h3>
@@ -75,9 +74,9 @@
                             </div>
                             <p>Eksperimen dengan bentuk huruf dan gaya tipografi modern. Tujuannya adalah menciptakan desain yang kuat, unik, dan tetap mudah dibaca dalam konteks antarmuka digital.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="work-card">
+                    <article class="work-card">
                         <img src="assets/images/2 (1).png" alt="UI Components Library">
                         <div class="work-details">
                             <h3>UI Components Library</h3>
@@ -87,13 +86,14 @@
                             </div>
                             <p>Pembuatan sistem desain reusable untuk mempercepat proses pengembangan antarmuka. Setiap komponen dirancang konsisten, fleksibel, dan mudah diterapkan di berbagai proyek web.</p>
                         </div>
-                    </div>
+                    </article>
 
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer diberi ID "contact" -->
     <footer class="main-footer" id="contact">
         <div class="footer-media">
             <a href="#"><i class="fab fa-facebook-square"></i></a>
@@ -108,3 +108,4 @@
 
 </body>
 </html>
+

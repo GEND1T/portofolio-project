@@ -37,24 +37,25 @@
             <!-- Checkbox tersembunyi -->
             <input type="checkbox" class="hamburger-toggle" id="hamburger-toggle">
             
-            <!-- Navbar (Sidebar) - id "navbar-menu" dihapus karena tidak perlu -->
             <nav class="navbar">
                 <ul class="menu">
                     <li><a href="index.html">Home</a></li> 
-                    <!-- Saya perbaiki ini, halaman blog seharusnya menyorot 'Blog' -->
+                    <!-- Saya perbaiki: Halaman ini adalah bagian dari Blog -->
                     <li class="current-page"><a href="blog.html">Blog</a></li>
                     <li><a href="works.html">Works</a></li>
+                    <!-- Link "Contact" diubah untuk mengarah ke ID footer -->
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
 
-             <!-- Label (Tombol Hamburger) -->
-             <label for="hamburger-toggle" class="hamburger-menu" aria-label="Buka menu">☰</label>
+            <!-- Tombol Hamburger (Label) -->
+            <label for="hamburger-toggle" class="hamburger-menu" aria-label="Buka menu">☰</label>
         </div>
     </header>
 
     <main>
-        <div class="container work-detail-content"> 
+        <!-- Konten <article> lebih semantik untuk isi blog -->
+        <article class="container work-detail-content"> 
             
             <h1>Why Consistency Matters in Design Systems</h1>
             
@@ -79,9 +80,10 @@
             
             <img src="assets/images/3 (2).png" alt="Desain Dashboard">
 
-        </div>
+        </article>
     </main>
 
+    <!-- Footer diberi ID "contact" -->
     <footer class="main-footer" id="contact">
         <div class="footer-media">
             <a href="#"><i class="fab fa-facebook-square"></i></a>
@@ -96,3 +98,4 @@
 
 </body>
 </html>
+
