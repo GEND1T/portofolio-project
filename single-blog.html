@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing Dashboards - My Work</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .work-detail-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px; /* Meniru style dari .work-card img */
+            margin: 30px 0; /* Memberi jarak vertikal antar elemen */
+        }
+        .work-detail-content .work-meta {
+            margin: 25px 0; /* Memberi jarak pada info tahun & kategori */
+        }
+        .work-detail-content h3 {
+             margin-top: 20px; /* Memberi jarak di atas h3 */
+        }
+
+        /* Perbaikan kecil agar container utama tidak terlalu dekat dengan header */
+        main {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <button class="hamburger-menu" id="hamburger-btn" aria-label="Toggle menu">
+                &#9776; </button>
+            
+            <nav class="navbar" id="navbar-menu">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li> 
+                    <li><a href="blog.html">Blog</a></li>
+                    
+                    <li class="current-page"><a href="#">Works</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container work-detail-content"> 
+            
+            <h1>Why Consistency Matters in Design Systems</h1>
+            
+            <div class="work-meta">
+                <span class="year">2025</span>
+                <span class="category">UX, Components</span>
+            </div>
+
+            <p>Konsistensi adalah salah satu fondasi utama dalam dunia desain. Dalam konteks sistem desain (design systems), konsistensi bukan sekadar tampilan yang sama, melainkan bagaimana setiap elemen berfungsi dan berinteraksi dengan cara yang dapat diprediksi oleh pengguna.
+                Ketika tampilan, warna, bentuk tombol, dan pola navigasi digunakan secara konsisten, pengguna akan merasa familiar, sehingga mereka dapat berfokus pada tujuan utama — bukan pada cara menggunakan produk.</p>
+
+            <img src="assets/images/3 (3).png" alt="Contoh UI Dashboard">
+
+            
+            <h3>Meningkatkan Efisiensi Tim Desain</h3>
+
+            <p>Sistem desain yang solid tidak hanya membantu pengguna, tetapi juga mempermudah pekerjaan tim desain dan pengembang.
+                Dengan adanya komponen yang telah distandarisasi, tim dapat menghemat waktu dalam proses pembuatan antarmuka.
+                Tidak perlu lagi mendesain ulang tombol, ikon, atau form di setiap proyek — cukup menggunakan komponen yang sudah ada dalam sistem desain.</p>
+
+            <img src="assets/images/3 (1).png" alt="Desain Dashboard">
+            
+            <img src="assets/images/3 (2).png" alt="Desain Dashboard">
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-media">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a> 
+        </div>
+        <p>Copyright &copy;2025 Muhammad Afin Aditya</p>
+    </footer>
+
+
+    <script>
+        // Memilih tombol hamburger dan menu navbar
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navbarMenu = document.getElementById('navbar-menu');
+
+        // Menambahkan event listener 'click'
+        hamburgerBtn.addEventListener('click', function() {
+            // Toggle kelas 'active' pada tombol
+            this.classList.toggle('active');
+            // Toggle kelas 'active' pada menu
+            navbarMenu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

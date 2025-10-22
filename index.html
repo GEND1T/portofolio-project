@@ -1,0 +1,144 @@
+<!-- HOMEPAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afin Aditya - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <!-- Navigasi ini sekarang akan berfungsi sebagai sidebar di mobile -->
+            <nav class="navbar" id="mobile-nav">
+                <ul class="menu">
+                    <li class="current-page"><a href="#">Home</a></li> 
+                    <li><a href="blog.html">Blog</a></li>
+                    
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Tombol Hamburger baru ditambahkan -->
+            <button class="hamburger-menu" id="hamburger-btn" aria-label="Buka menu">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-section container">
+            <div class="hero-text">
+                <h1>Hi, I am Afin Aditya,<br>Web Developer & Informatics Student</h1>
+                <p>Saya adalah mahasiswa Teknik Informatika yang berfokus pada pengembangan website interaktif, modern, dan fungsional. Saya senang menggabungkan logika pemrograman dengan desain agar menghasilkan pengalaman pengguna yang menarik dan efisien.</p>
+                <a href="#" class="btn-resume">Download Resume</a>
+            </div>
+            <div class="hero-image">
+                <img src="" alt="Foto Afin Aditya">
+            </div>
+        </section>
+
+        <!-- RECENT POSTS SECTION -->
+        <section class="recent-posts">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Recent posts</h2>
+                    <a href="#">View all</a>
+                </div>
+                <div class="posts-grid">
+                    <div class="post-card">
+                        <h3>Membangun Sistem Informasi Absensi dari Nol</h3>
+                        <div class="card-meta">
+                            <span>12 Mei 2025</span>
+                            <span class="divider">|</span>
+                            <span>Desain, Pemrograman</span>
+                        </div>
+                        <p>Artikel ini membahas langkah-langkah membangun sistem absensi peserta didik menggunakan HTML, CSS, dan JavaScript...</p>
+                    </div>
+                    <div class="post-card">
+                        <h3>Tips Membuat UI Dashboard yang Profesional</h3>
+                        <div class="card-meta">
+                            <span>28 Mei 2025</span>
+                            <span class="divider">|</span>
+                            <span>Figma, Front-End</span>
+                        </div>
+                        <p>Beberapa prinsip desain UI yang bisa diterapkan dalam pembuatan dashboard modern, termasuk konsistensi warna...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED WORKS SECTION -->
+        <section class="featured-works container">
+            <div class="section-header">
+                <h2>Featured works</h2>
+            </div>
+            <div class="works-list">
+                <div class="work-card">
+                    <img src="assets/images/1 (3).png" alt="Sistem Absensi">
+                    <div class="work-info">
+                        <h3>Sistem Informasi Absensi Peserta Didik</h3>
+                        <div class="work-meta">
+                            <span class="year">2025</span>
+                            <span class="category">Web App</span>
+                        </div>
+                        <p>Website absensi yang dikembangkan menggunakan HTML, CSS, dan JavaScript dengan fitur CRUD siswa, notifikasi otomatis...</p>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <img src="assets/images/1 (1).png" alt="Portofolio Pribadi">
+                    <div class="work-info">
+                        <h3>Website Portofolio Pribadi</h3>
+                        <div class="work-meta">
+                            <span class="year">2025</span>
+                            <span class="category">Front-End</span>
+                        </div>
+                        <p>Situs pribadi yang menampilkan karya, artikel, dan pengalaman saya dalam bidang pengembangan web, dirancang dengan tampilan bersih...</p>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <img src="assets/images/1 (2).png" alt="Dashboard Akademik">
+                    <div class="work-info">
+                        <h3>Dashboard Akademik Mahasiswa</h3>
+                        <div class="work-meta">
+                            <span class="year">2025</span>
+                            <span class="category">UI/UX Design</span>
+                        </div>
+                        <p>Prototipe dashboard akademik berbasis web untuk memantau nilai, jadwal, dan tugas mahasiswa dengan desain interaktif berbasis Figma.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-media">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a> 
+        </div>
+        <p>Copyright &copy;2025 Muhammad Afin Aditya</p>
+    </footer>
+
+    <!-- JavaScript untuk fungsionalitas klik -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        hamburgerBtn.addEventListener('click', () => {
+            // Menambah/menghapus kelas 'active' pada sidebar dan tombol
+            mobileNav.classList.toggle('active');
+            hamburgerBtn.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
+

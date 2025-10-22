@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* === GENERAL STYLING === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Heebo', sans-serif;
+            color: #21243D; /* Warna teks utama */
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 { font-size: 44px; font-weight: 700; line-height: 60px; }
+        h2 { font-size: 22px; font-weight: 400; }
+        h3 { font-size: 26px; font-weight: 700; }
+        p { font-size: 16px; line-height: 24px; }
+        a { text-decoration: none; color: #21243D; }
+
+        /* === HEADER & NAVIGATION === */
+        header {
+            height: 80px;
+        }
+        header .container {
+            display: flex;
+            justify-content: flex-end; /* Posisikan menu di kanan */
+            align-items: center;
+            height: 100%;
+        }
+        header nav a {
+            margin-left: 35px;
+            font-weight: 500;
+            font-size: 20px;
+        }
+        header nav a.active {
+            color: #FF6464;
+        }
+        .logo, .hamburger-menu {
+            display: none; /* Sembunyikan di desktop */
+        }
+
+        /* === HERO SECTION === */
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            padding-top: 90px;
+            padding-bottom: 70px;
+        }
+        .hero-text h1 { margin-bottom: 40px; }
+        .hero-text p { margin-bottom: 35px; }
+        .btn-resume {
+            background-color: #FF6464;
+            color: white;
+            padding: 12px 20px;
+            font-weight: 500;
+            font-size: 20px;
+            border-radius: 2px;
+        }
+        .hero-image img {
+            width: 243px;
+            height: 243px;
+            border-radius: 50%;
+            box-shadow: -10px 12px 0px 0px #EDF7FA; /* Efek bayangan elips */
+        }
+
+        /* === RECENT POSTS SECTION === */
+        .recent-posts {
+            background-color: #EDF7FA;
+            padding: 25px 0;
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .section-header a {
+            color: #00A8CC;
+        }
+        .posts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            padding: 24px;
+            border-radius: 4px;
+        }
+        .card h3 { margin-bottom: 15px; }
+        .card .card-meta { margin-bottom: 15px; }
+        .card .card-meta .divider { margin: 0 15px; }
+
+        /* === FEATURED WORKS SECTION === */
+        .featured-works { padding: 30px 0 80px 0; }
+        .featured-works .section-header { justify-content: flex-start; }
+        .work-card {
+            display: flex;
+            gap: 18px;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        .work-card img {
+            width: 246px;
+            height: 180px;
+            border-radius: 6px;
+        }
+        .work-card h3 { font-size: 30px; margin-bottom: 15px; }
+        .work-meta { display: flex; align-items: center; gap: 25px; margin-bottom: 15px; }
+        .work-meta .year {
+            background-color: #142850;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 16px;
+            font-weight: 900;
+        }
+        .work-meta .category {
+            color: #8695A4;
+            font-size: 20px;
+        }
+
+        /* === FOOTER === */
+        footer {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .social-icons {
+            margin-bottom: 25px;
+        }
+        .social-icons a {
+            margin: 0 15px;
+        }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+        footer p {
+            font-size: 14px;
+        }
+
+        /* === RESPONSIVE DESIGN (@media) === */
+        @media(max-width: 768px) {
+            h1 { font-size: 32px; line-height: 40px; }
+            
+            header nav { display: none; } /* Sembunyikan navigasi desktop */
+            .hamburger-menu { display: block; background: none; border: none; font-size: 2.5rem; cursor: pointer; }
+
+            .hero {
+                flex-direction: column-reverse; /* Gambar jadi di atas */
+                text-align: center;
+                gap: 40px;
+                padding-top: 30px;
+                padding-bottom: 60px;
+            }
+            .hero-text h1 { margin-bottom: 20px; }
+            .hero-text p { margin-bottom: 30px; }
+            
+            .section-header { justify-content: center; }
+            .section-header a { display: none; } /* Sembunyikan "view all" */
+
+            .posts-grid { grid-template-columns: 1fr; }
+
+            .work-card {
+                flex-direction: column;
+            }
+            .work-card img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#" class="logo"></a> 
+            <nav>
+                <a href="#" class="active">Works</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </nav>
+            <button class="hamburger-menu" aria-label="Buka menu">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-text">
+                <h1>Hi, I am John,<br>Creative Technologist</h1>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                <a href="#" class="btn-resume">Download Resume</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://i.ibb.co/L5rN18b/profile-pic.png" alt="Foto John">
+            </div>
+        </section>
+
+        <section class="recent-posts">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Recent posts</h2>
+                    <a href="#">View all</a>
+                </div>
+                <div class="posts-grid">
+                    <div class="card">
+                        <h3>Making a design system from scratch</h3>
+                        <div class="card-meta">
+                            <span>12 Feb 2020</span>
+                            <span class="divider">|</span>
+                            <span>Design, Pattern</span>
+                        </div>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Creating pixel perfect icons in Figma</h3>
+                        <div class="card-meta">
+                            <span>12 Feb 2020</span>
+                            <span class="divider">|</span>
+                            <span>Figma, Icon Design</span>
+                        </div>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-works container">
+            <div class="section-header">
+                <h2>Featured works</h2>
+            </div>
+            <div class="works-list">
+                <div class="work-card">
+                    <img src="https://i.ibb.co/3kC7C2T/work1.jpg" alt="Designing Dashboards">
+                    <div class="work-info">
+                        <h3>Designing Dashboards</h3>
+                        <div class="work-meta">
+                            <span class="year">2020</span>
+                            <span class="category">Dashboard</span>
+                        </div>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <img src="https://i.ibb.co/dJwqg1v/work2.jpg" alt="Vibrant Portraits">
+                    <div class="work-info">
+                        <h3>Vibrant Portraits of 2020</h3>
+                        <div class="work-meta">
+                            <span class="year">2018</span>
+                            <span class="category">Illustration</span>
+                        </div>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                    </div>
+                </div>
+                
+                <div class="work-card">
+                    <img src="https://i.ibb.co/Y0dCKc2/work3.jpg" alt="Malayalam Type">
+                    <div class="work-info">
+                        <h3>36 Days of Malayalam type</h3>
+                        <div class="work-meta">
+                            <span class="year">2018</span>
+                            <span class="category">Typography</span>
+                        </div>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="https://i.ibb.co/Gtn0C29/fb.png" alt="Facebook"></a>
+            <a href="#"><img src="https://i.ibb.co/Y00T4V5/insta.png" alt="Instagram"></a>
+            <a href="#"><img src="https://i.ibb.co/N1p01kR/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="https://i.ibb.co/Mhpb5v8/Linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <p>Copyright ©2020 All rights reserved</p>
+    </footer>
+
+</body>
+</html>

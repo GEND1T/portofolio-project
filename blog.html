@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false">
+                &#9776; 
+            </button>
+            
+            <nav class="navbar">
+                <ul class="menu">
+                    
+                    <li><a href="index.html">Home</a></li> 
+                    <li class="current-page"><a href="#">Blog</a></li>
+                    
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="featured-works">
+            <div class="container">
+                
+                <h1 style="margin-bottom: 50px;">Blog</h1>
+
+                <div class="works-list">
+
+                    <article class="work-card" style="display: block; grid-template-columns: none;">
+                        <a href="single-blog.html" class=""><h3>Why Consistency Matters in Design Systems</h3></a>
+                        
+                        <div class="card-meta" style="margin-bottom: 15px; margin-top: 10px;">
+                            <span>11 Mar 2025</span>
+                            <span class="divider">|</span>
+                            <span>UX, Components</span>
+                        </div>
+                        <a href="single-blog.html" class=""><p>Konsistensi membuat pengguna merasa familiar. Dengan sistem desain yang solid, tim bisa bekerja lebih cepat, desain lebih seragam, dan pengalaman pengguna lebih mulus.</p></a>
+                    </article>
+
+                    <article class="work-card" style="display: block; grid-template-columns: none;">
+                        <a href="single-blog.html" class=""><h3>Design Trends 2025: Simplicity Meets Function</h3></a>
+                        <div class="card-meta" style="margin-bottom: 15px; margin-top: 10px;">
+                            <span>12 Feb 2025</span>
+                            <span class="divider">|</span>
+                            <span>Figma, UI Design</span>
+                        </div>
+                        <p>Desain modern kini lebih menekankan keseimbangan antara estetika dan kegunaan. Warna lembut, tipografi sederhana, dan interaksi halus menjadi kunci pengalaman pengguna yang nyaman.</p>
+                    </article>
+
+                    <article class="work-card" style="display: block; grid-template-columns: none;">
+                        <a href="single-blog.html" class=""><h3>Building a Personal Brand as a Developer</h3></a>
+                        <div class="card-meta" style="margin-bottom: 15px; margin-top: 10px;">
+                            <span>25 Feb 2025</span>
+                            <span class="divider">|</span>
+                            <span>JavaScript, Portfolio</span>
+                        </div>
+                        <p>Menjadi developer bukan hanya soal kode. Membangun identitas profesional membantu kamu dikenal dan dipercaya. Tampilkan karya, kontribusi, dan gaya unikmu dalam setiap proyek.</p>
+                    </article>
+
+                    <article class="work-card" style="display: block; grid-template-columns: none;">
+                        <a href="single-blog.html" class=""><h3>Optimizing Performance for Modern Web Apps</h3></a>
+                        <div class="card-meta" style="margin-bottom: 15px; margin-top: 10px;">
+                            <span>5 Mar 2025</span>
+                            <span class="divider">|</span>
+                            <span>Node.js, Performance</span>
+                        </div>
+                        <p>Kecepatan aplikasi web sangat memengaruhi pengalaman pengguna. Gunakan teknik lazy loading, caching, dan minimisasi kode untuk hasil maksimal tanpa mengorbankan desain.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-media">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a> 
+        </div>
+        <p>Copyright &copy;2025 Muhammad Afin Aditya</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navbar = document.querySelector('.navbar');
+
+        hamburger.addEventListener('click', () => {
+            // Toggle class 'active' pada navbar (sidebar)
+            navbar.classList.toggle('active');
+            
+            // Toggle class 'active' pada tombol hamburger (untuk ganti warna)
+            hamburger.classList.toggle('active');
+
+            // Ubah aria-expanded
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+        });
+    </script>
+
+</body>
+</html>

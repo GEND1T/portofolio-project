@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <button class="hamburger-menu" aria-label="Toggle menu">
+                &#9776; </button>
+
+            <nav class="navbar">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li> 
+                    <li><a href="blog.html">Blog</a></li>
+                    
+                    <li class="current-page"><a href="#">Works</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="featured-works">
+            <div class="container">
+                <h1>Work</h1>
+
+                <div class="works-list">
+
+                    <div class="work-card">
+                        <img src="assets/images/2 (4).png" alt="Designing Dashboards">
+                        <div class="work-details">
+                            <h3>Designing Dashboards</h3>
+                            <div class="work-meta">
+                                <span class="year">2025</span>
+                                <span class="category">Web Dashboard UI/UX</span>
+                            </div>
+                            <p>Proyek perancangan dashboard interaktif dengan fokus pada tampilan bersih dan kemudahan navigasi. Menggunakan kombinasi warna gelap dan elemen minimalis agar data lebih mudah dipahami secara visual.</p>
+                        </div>
+                    </div>
+
+                    <div class="work-card">
+                        <img src="assets/images/2 (3).png" alt="Creative Portrait Series">
+                        <div class="work-details">
+                            <h3>Creative Portrait Series</h3>
+                            <div class="work-meta">
+                                <span class="year">2024</span>
+                                <span class="category">Digital Illustration</span>
+                            </div>
+                            <p>Kumpulan ilustrasi digital yang menggambarkan karakter dan emosi manusia dalam gaya warna berani. Setiap karya dirancang dengan sentuhan personal untuk menunjukkan ekspresi dan identitas visual yang kuat.</p>
+                        </div>
+                    </div>
+
+                    <div class="work-card">
+                        <img src="assets/images/2 (2).png" alt="Modern Type Exploration">
+                        <div class="work-details">
+                            <h3>Modern Type Exploration</h3>
+                            <div class="work-meta">
+                                <span class="year">2024</span>
+                                <span class="category">Typography Design</span>
+                            </div>
+                            <p>Eksperimen dengan bentuk huruf dan gaya tipografi modern. Tujuannya adalah menciptakan desain yang kuat, unik, dan tetap mudah dibaca dalam konteks antarmuka digital.</p>
+                        </div>
+                    </div>
+
+                    <div class="work-card">
+                        <img src="assets/images/2 (1).png" alt="UI Components Library">
+                        <div class="work-details">
+                            <h3>UI Components Library</h3>
+                            <div class="work-meta">
+                                <span class="year">2023</span>
+                                <span class="category">Design System & Components</span>
+                            </div>
+                            <p>Pembuatan sistem desain reusable untuk mempercepat proses pengembangan antarmuka. Setiap komponen dirancang konsisten, fleksibel, dan mudah diterapkan di berbagai proyek web.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-media">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a> 
+        </div>
+        <p>Copyright &copy;Muhammad Afin Aditya</p>
+    </footer>
+
+
+    <script>
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navbar = document.querySelector('.navbar');
+
+        hamburger.addEventListener('click', () => {
+            // Toggle kelas 'active' pada tombol hamburger
+            hamburger.classList.toggle('active');
+            // Toggle kelas 'active' pada navbar (sidebar)
+            navbar.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
